@@ -1,0 +1,2864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>984</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="2">
+     <widget class="QWidget" name="main" native="true">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(233, 224, 162);
+color:black</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <property name="bottomMargin">
+        <number>4</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="maintopholder">
+         <item>
+          <widget class="QPushButton" name="expand_menu">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: light yellow;
+    border: none;
+    padding: 10px 15px; /* Padding for the button */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+}
+
+QPushButton:hover {
+	    background-color: rgb(226, 190, 134);
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/icons8-menu-48.png</normaloff>:/images/stock_png/icons8-menu-48.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="main_heading">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;HOSPITAL MANAGEMENT SYSTEM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="lineWidth">
+          <number>2</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="managepatientsrecords">
+         <property name="cursor">
+          <cursorShape>OpenHandCursor</cursorShape>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="currentIndex">
+          <number>4</number>
+         </property>
+         <widget class="QWidget" name="pg1">
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="doctorsavailablity_label">
+             <property name="styleSheet">
+              <string notr="true">padding:5px;
+background-color: rgb(227, 172, 233);
+border-radius:15px
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Doctors Availablity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="doctorsavailablity_tab">
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="tab_5">
+              <attribute name="title">
+               <string>not available</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <layout class="QHBoxLayout" name="binsearchholder_2">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="doctorsavailablity_tabnotavailable_searchentry">
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(209, 241, 239);
+border-radius: 7px</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>search...</string>
+                   </property>
+                   <property name="clearButtonEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="doctorsavailablity_tabnotavailable_searchbutton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: lightblue; /* light blue background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(93, 173, 229); /* Darker light blue on hover */
+}
+
+QPushButton:clicked {
+	background-color: rgb(186, 235, 207):
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>search</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="doctorsavailablity_tabnotavailable_view">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(234, 199, 202);
+border-radius: 10px;gg</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_3">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <item>
+                   <spacer name="horizontalSpacer_11">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>183</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="doctorsavailablity_tabnotavailable_markavailablebutton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>150</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(155, 155, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>mark available</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_12">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>183</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_4">
+              <attribute name="title">
+               <string>Available</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <layout class="QHBoxLayout" name="binsearchholder">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="doctorsavailablity_tabavailable_searchentry">
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(209, 241, 239);
+border-radius: 7px</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>search...</string>
+                   </property>
+                   <property name="clearButtonEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="doctorsavailablity_tabavailable_searchbutton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: skyblue; /* light blue background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(93, 168, 229); /* Darker light blue on hover */
+}
+
+QPushButton:clicked {
+	background-color: rgb(186, 235, 207):
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>search</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="doctorsavailablity_tabavailable_view">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(204, 199, 202);
+border-radius: 10px;gg</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_2">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <spacer name="horizontalSpacer_10">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>143</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="doctorsavailablity_tabavailable_marknotavailablebutton">
+                    <property name="minimumSize">
+                     <size>
+                      <width>150</width>
+                      <height>50</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(155, 125, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>mark not available</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_9">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>144</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_2">
+              <attribute name="title">
+               <string>working</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <layout class="QHBoxLayout" name="binsearchholder_4">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="doctorsavailablity_tabworking_searchentry">
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(209, 241, 239);
+border-radius: 7px</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>search...</string>
+                   </property>
+                   <property name="clearButtonEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="doctorsavailablity_tabworking_searchbutton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: lightblue; /* light blue background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(93, 173, 229); /* Darker light blue on hover */
+}
+
+QPushButton:clicked {
+	background-color: rgb(186, 235, 207):
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>search</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="doctorsavailablity_tabworking_searchview">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(230, 190, 196);
+border-radius: 10px;gg</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_6">
+              <attribute name="title">
+               <string>add doctor</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_11">
+               <item>
+                <widget class="QFrame" name="frame_4">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_contact">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>contact info</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_name">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Doctor name</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_dept">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="dragEnabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Department</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_houseno">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>House no</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_state">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>state</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_salary">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>salary</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_city">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string> city</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="doctorsavailablity_tabadddoc_dispprob">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>36</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="widget" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <spacer name="horizontalSpacer_8">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>168</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="doctorsavailablity_tabadddoc_button">
+                    <property name="minimumSize">
+                     <size>
+                      <width>150</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(100, 155, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>add</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_7">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>167</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_7">
+              <attribute name="title">
+               <string>delete doctor</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <item>
+                <layout class="QHBoxLayout" name="binsearchholder_3">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="doctorsavailablity_tabdeletedoc_searchentry">
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(209, 241, 239);
+border-radius: 7px</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>search...</string>
+                   </property>
+                   <property name="clearButtonEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="doctorsavailablity_tabdeletedoc_searchbutton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: lightblue; /* light blue background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(93, 173, 229); /* Darker light blue on hover */
+}
+
+QPushButton:clicked {
+	background-color: rgb(186, 235, 207):
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>search</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="doctorsavailablity_tabdeletedoc_view">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(224, 163, 165);
+border-radius: 10px;gg</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="doctorsavailablity_tabdeletedoc_deletebutton">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	background-color: rgb(100, 155, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Delete</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pg2">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="managepatientsrecords_label">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">padding:5px;
+background-color: rgb(227, 172, 233);
+border-radius:10px
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Manage Patients Records&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QTabWidget" name="managepatientsrecords_tab">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="medstock">
+              <attribute name="title">
+               <string>Current Records</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="1" column="0">
+                <widget class="QTableWidget" name="managepatientsrecords_tabrecords_view">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(234, 199, 202);
+border-radius: 10px;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QWidget" name="stocklinebuttonholder" native="true">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	background-color: rgb(155, 155, 229);
+	border:none;
+	padding:10px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_3">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLineEdit" name="managepatientsrecords_tabrecords_search">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(227, 174, 175);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>search...</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="managepatientsrecords_tabrecords_searchbutton">
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string>Enter</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_8">
+              <attribute name="title">
+               <string>Past Records</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_20">
+               <item>
+                <widget class="QWidget" name="stocklinebuttonholder_2" native="true">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	background-color: rgb(155, 155, 229);
+	border:none;
+	padding:10px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_4">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>5</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLineEdit" name="managepatientsrecords_tabrecords_searchpast">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(234, 174, 100);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>search...</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="managepatientsrecords_tabrecords_searchbutton_past">
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string>Enter</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="managepatientsrecords_tabrecords_view_past">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(220, 160, 190);
+border-radius: 10px;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab">
+              <attribute name="title">
+               <string>Delete record</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QTableWidget" name="managepatientsrecords_tabdelete_view">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(234, 199, 202);
+border-radius: 10px;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="QLineEdit" name="managepatientsrecords_tabdelete_search">
+                    <property name="minimumSize">
+                     <size>
+                      <width>280</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(227, 174, 175);
+padding:10px;
+border-radius:8px;</string>
+                    </property>
+                    <property name="placeholderText">
+                     <string>search...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="managepatientsrecords_tabdelete_searchbutton">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(175, 135, 190);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>search</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="managepatientsrecords_tabdelete_deletebutton">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(155, 155, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Delete Record</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pg3">
+          <layout class="QVBoxLayout" name="verticalLayout_18">
+           <item>
+            <widget class="QLabel" name="book_appointment_label">
+             <property name="styleSheet">
+              <string notr="true">padding:5px;
+background-color: rgb(227, 172, 233);
+border-radius:15px
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Book Appointment&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="bookappointment_tab">
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="tab_10">
+              <attribute name="title">
+               <string>Entry</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_13">
+               <item>
+                <widget class="QScrollArea" name="scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>119</width>
+                    <height>494</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_12">
+                   <item>
+                    <widget class="QLineEdit" name="bookappointment_tabentry_name">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>name</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="bookappointment_tabentry_doblabel">
+                     <property name="text">
+                      <string>DOB</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDateEdit" name="bookappointment_tabentry_dob">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="bookappointment_tabentry_gender">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>gender</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="bookappointment_tabentry_medicalcondition">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>medical condition</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="bookappointment_tabentry_contact">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>email</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="bookappointment_tabentry_labelappointmentdate">
+                     <property name="text">
+                      <string>Appointed Date</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDateEdit" name="bookappointment_tabentry_appointmentdate">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="bookappointment_tabentry_houseno">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>House no</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="bookappointment_tabentry_city">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>city</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="bookappointment_tabentry_state">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(165, 231, 190);
+padding:10px;
+border-radius:8px;</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="dragEnabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>state</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="bookappointment_tabentry_dispprob">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="widget_2" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout_9">
+                  <item>
+                   <spacer name="horizontalSpacer_17">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>168</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="bookappointment_tabentry_button">
+                    <property name="minimumSize">
+                     <size>
+                      <width>150</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(100, 155, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Book</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_18">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>167</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_11">
+              <attribute name="title">
+               <string>cancel appointment</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_16">
+               <item>
+                <layout class="QHBoxLayout" name="binsearchholder_6">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="bookappointment_tabcancel_search">
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(209, 241, 239);
+border-radius: 7px</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>search...</string>
+                   </property>
+                   <property name="clearButtonEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="bookappointment_tabcancel_searchbutton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: lightblue; /* light blue background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(93, 173, 229); /* Darker light blue on hover */
+}
+
+QPushButton:clicked {
+	background-color: rgb(186, 235, 207):
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>search</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="bookappointment_tabcancel_view">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(224, 163, 165);
+border-radius: 10px;gg</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="bookappointment_tabcancel_buttondelete">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+	background-color: rgb(100, 155, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Delete</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_3">
+              <attribute name="title">
+               <string>completed</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <item>
+                <layout class="QHBoxLayout" name="binsearchholder_7">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="bookappointment_tabcompleted_search">
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(209, 241, 239);
+border-radius: 7px</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>search...</string>
+                   </property>
+                   <property name="clearButtonEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="bookappointment_tabcompleted_searchbutton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: lightblue; /* light blue background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(93, 173, 229); /* Darker light blue on hover */
+}
+
+QPushButton:clicked {
+	background-color: rgb(186, 235, 207):
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>search</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="bookappointment_tabcompleted_view">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(224, 163, 165);
+border-radius: 10px;gg</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pg4">
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <widget class="QLabel" name="billing_label">
+             <property name="styleSheet">
+              <string notr="true">padding:5px;
+background-color: rgb(227, 172, 233);
+border-radius:15px
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Billing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QScrollArea" name="scrollArea_2">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents_2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>664</width>
+                <height>577</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_17">
+               <item>
+                <layout class="QHBoxLayout" name="binsearchholder_8">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLineEdit" name="billing_search">
+                   <property name="minimumSize">
+                    <size>
+                     <width>450</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(209, 241, 239);
+border-radius: 7px</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>search...</string>
+                   </property>
+                   <property name="clearButtonEnabled">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="billing_search_button">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+    background-color: lightblue; /* light blue background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(93, 173, 229); /* Darker light blue on hover */
+}
+
+QPushButton:clicked {
+	background-color: rgb(186, 235, 207):
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>search</string>
+                   </property>
+                   <property name="checkable">
+                    <bool>true</bool>
+                   </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="billing_search_display">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>300</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(224, 163, 165);
+border-radius: 10px;gg</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="billing_days">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(220, 151, 124);
+padding:10px;
+border-radius:8px;</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>days admitted</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="billing_costperday">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(220, 151, 124);
+padding:10px;
+border-radius:8px;</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>cost per day</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="billing_totalcost">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(220, 151, 124);
+padding:10px;
+border-radius:8px;</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>total cost</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="widget_3" native="true">
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <spacer name="horizontalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>221</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="billing_data">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(175, 135, 190);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>GET DATA</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="billing_pay">
+                    <property name="minimumSize">
+                     <size>
+                      <width>300</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {
+	background-color: rgb(100, 155, 229);
+	border:none;
+	padding:15px 20px;
+	border-radius:10px;
+}
+
+QPushButton:hover {
+	
+	background-color: rgb(100, 54, 227);
+	color: white
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>PAY</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                    <property name="autoExclusive">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>220</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page">
+          <layout class="QVBoxLayout" name="verticalLayout_19">
+           <item>
+            <widget class="QGraphicsView" name="graphicsView"/>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_5">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="styleSheet">
+                 <string notr="true">font: 900 18pt &quot;Arial Black&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>PATIENT COUNT :</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLCDNumber" name="lcdNumber_patient_count">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="smallDecimalPoint">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_8">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="styleSheet">
+                 <string notr="true">font: 900 18pt &quot;Arial Black&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>DOCTORS AVAILABLE:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLCDNumber" name="lcdNumber_available_doctors">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="smallDecimalPoint">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_6">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="styleSheet">
+                 <string notr="true">font: 900 18pt &quot;Arial Black&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>NOT AVAILABLE DOCTORS :</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLCDNumber" name="lcdNumber_notavailable_doctors">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="smallDecimalPoint">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="only_icon" native="true">
+      <property name="styleSheet">
+       <string notr="true">/* Background color for the entire form */
+QWidget {
+    background-color: rgb(127, 133, 226); /* blue background */
+}
+
+/* Style for QPushButton */
+QPushButton {
+    background-color: rgb(181, 233, 162); /* Green background */
+    color: black; /* White text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(143, 229, 112); /* Darker green on hover */
+}
+
+ QPushButton:checked {
+	background-color:rgb(143, 229, 112) ;
+	font-weight: bold;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <property name="bottomMargin">
+        <number>4</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="prof1Holder">
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="profile">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="HMS_resources.qrc">:/images/stock_png/owuT8U7P_400x400.jpg</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="dashboard">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="HMS_resources.qrc">
+           <normaloff>:/images/stock_png/dashboard.png</normaloff>:/images/stock_png/dashboard.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="onlyiconholder">
+         <item>
+          <widget class="QPushButton" name="appointment">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/history.png</normaloff>:/images/stock_png/history.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="doctorentry">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/survey.png</normaloff>:/images/stock_png/survey.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="patientrecord">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/health-report.png</normaloff>:/images/stock_png/health-report.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="billing">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/bill.png</normaloff>:/images/stock_png/bill.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="onlyiconspacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>68</width>
+           <height>150</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exit">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="HMS_resources.qrc">
+           <normaloff>:/images/stock_png/logout.png</normaloff>:/images/stock_png/logout.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="iconname" native="true">
+      <property name="styleSheet">
+       <string notr="true">/* Background color for the entire form */
+QWidget {
+    background-color: rgb(127, 133, 226); /* blue background */
+}
+
+/* Style for QPushButton */
+QPushButton {
+    background-color: rgb(181, 233, 162); /* Green background */
+    color: black; /* black text */
+    border: none;
+    padding: 10px 20px; /* Padding for the button */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; /* Font size */
+    margin: 4px 2px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Optional: Change the button appearance on hover */
+QPushButton:hover {
+    background-color: rgb(143, 229, 112); /* Darker green on hover */
+}
+
+ QPushButton:checked {
+	background-color:rgb(143, 229, 112) ;
+	font-weight: bold;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
+       <property name="rightMargin">
+        <number>4</number>
+       </property>
+       <property name="bottomMargin">
+        <number>4</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="prof2holder">
+         <property name="topMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="profile_expand">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="HMS_resources.qrc">:/images/stock_png/owuT8U7P_400x400.jpg</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="profile_expand_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;
+font-weight:bold;
+font-size:15px</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:15pt;&quot;&gt;APOLLO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="margin">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="iconwithnameholder">
+         <item>
+          <widget class="QPushButton" name="dashboard_expand">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/dashboard.png</normaloff>:/images/stock_png/dashboard.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="appointment_expand">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Appointment</string>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/history.png</normaloff>:/images/stock_png/history.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="doctorentry_expand">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Doctors entry</string>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/survey.png</normaloff>:/images/stock_png/survey.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="patientrecord_expand">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Patient Records</string>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/health-report.png</normaloff>:/images/stock_png/health-report.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="billing_expand">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="text">
+            <string>Billing</string>
+           </property>
+           <property name="icon">
+            <iconset resource="HMS_resources.qrc">
+             <normaloff>:/images/stock_png/bill.png</normaloff>:/images/stock_png/bill.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>40</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="iconwithnamespacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>150</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exit_expand">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>Exit</string>
+         </property>
+         <property name="icon">
+          <iconset resource="HMS_resources.qrc">
+           <normaloff>:/images/stock_png/logout.png</normaloff>:/images/stock_png/logout.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="HMS_resources.qrc"/>
+  <include location="HMS_resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>patientrecord_expand</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>patientrecord</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>13</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doctorentry_expand</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>doctorentry</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>169</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>155</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>billing_expand</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>billing</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>339</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashboard_expand</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashboard</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>424</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>15</x>
+     <y>424</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>patientrecord</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>patientrecord_expand</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>66</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>166</x>
+     <y>95</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doctorentry</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>doctorentry_expand</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>218</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>billing</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>billing_expand</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>26</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>216</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dashboard</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>dashboard_expand</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>207</x>
+     <y>416</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exit</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>662</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>72</x>
+     <y>659</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exit_expand</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>662</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>184</x>
+     <y>659</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>expand_menu</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>iconname</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>252</x>
+     <y>515</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>expand_menu</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>only_icon</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>284</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>483</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>appointment</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>appointment_expand</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>263</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>263</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>appointment_expand</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>appointment</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>15</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

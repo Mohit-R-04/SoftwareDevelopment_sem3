@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="images">
+    <file>stock_png/dashboard.png</file>
+    <file>stock_png/logout.png</file>
+    <file>stock_png/owuT8U7P_400x400.jpg</file>
+    <file>stock_png/Add Cart.png</file>
+    <file>stock_png/Boxes.png</file>
+    <file>stock_png/history.png</file>
+    <file>stock_png/bill.png</file>
+    <file>stock_png/health-report.png</file>
+    <file>stock_png/survey.png</file>
+    <file>stock_png/icons8-exit-275.png</file>
+    <file>stock_png/icons8-menu-48.png</file>
+    <file>stock_png/icons8-notification-96.png</file>
+    <file>stock_png/Locate.png</file>
+    <file>stock_png/profile.png</file>
+  </qresource>
+</RCC>
